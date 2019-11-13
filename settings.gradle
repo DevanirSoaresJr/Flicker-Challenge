@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Mezo_Flicker_Challenge'
