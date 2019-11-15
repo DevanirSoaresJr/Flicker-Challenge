@@ -1,11 +1,11 @@
 package devanir.soaresjunior.mezo_flicker_challenge.repo
 
-import devanir.soaresjunior.mezo_flicker_challenge.data.PhotoInfoResponse
-import devanir.soaresjunior.mezo_flicker_challenge.data.PhotoListResponse
+import com.pixelart.week6daily2flikrapi.model.PhotoResponse
+import com.pixelart.week6daily2flikrapi.model.photoinfo.InfoResponse
 import io.reactivex.Single
 
 interface RemoteDataSource {
-    fun getPhotos():Single<List<PhotoListResponse>>
-    fun getPhotoDetails(photoId: String):Single<PhotoInfoResponse>
-    fun getNetStatus():Single<PhotoListResponse>
+    fun getPhotos():Single<List<PhotoResponse>>
+    fun getPhotoDetails(photoId: String):Single<InfoResponse>
+    fun getNetStatus():Single<PhotoResponse>
 }
