@@ -1,17 +1,12 @@
 package devanir.soaresjunior.mezo_flicker_challenge.di.app
 
 import dagger.Component
-import devanir.soaresjunior.mezo_flicker_challenge.FlickrApp
-import devanir.soaresjunior.mezo_flicker_challenge.repo.Repository
-import devanir.soaresjunior.mezo_flicker_challenge.ui.view.MainActivity
-import devanir.soaresjunior.mezo_flicker_challenge.ui.view.SplashFragment
-import javax.inject.Singleton
+import devanir.soaresjunior.mezo_flicker_challenge.di.fragment.FragmentComponent
+import devanir.soaresjunior.mezo_flicker_challenge.di.fragment.FragmentModule
+import devanir.soaresjunior.mezo_flicker_challenge.di.network.NetworkModule
 
-@Singleton
-@Component(modules = [NetworkModule::class, RepositoryModule::class])
+@AppScope
+@Component(modules = [NetworkModule::class, AppModule::class])
 interface AppComponent {
-    fun inject(flickrApp: FlickrApp)
-    fun inject(splashFragment: SplashFragment)
-    fun inject(mainActivity: MainActivity)
-    fun repository(): Repository
+    fun newFragmentComponent(fragmentModule: FragmentModule): FragmentComponent
 }

@@ -1,32 +1,33 @@
-package com.pixelart.week6daily2flikrapi.model.photoinfo
+package devanir.soaresjunior.mezo_flicker_challenge.data.model.photoinfo
 
 import com.google.gson.annotations.SerializedName
 
 data class InfoPhoto(
-    val id : String,
+    val id: String,
     val secret: String,
     val server: String,
     val farm: Int,
     val dateuploaded: String,
-    val isfavorite: String,
-    val license: String,
+    val isfavorite: Int,
+    val license: Int,
     @SerializedName("safety_level")
-    val safetyLevel: String,
+    val safetyLevel: Int,
     val rotation: Int,
-    val originalsecret: String,
-    val owner: InfoOwner,
-    val title: InfoTitle,
-    val description: InfoDescription,
-    val visibility: InfoVisibility,
-    val dates: InfoDates,
+    val owner: Owner,
+    val title: Title,
+    val description: Description,
+    val visibility: Visibility,
+    val dates: Dates,
     val views: String,
-    val editability: InfoEditability,
-    val publiceditability: InfoPubliceditability,
-    val usage: InfoUsage,
-    val comments: InfoComments,
-    val notes: InfoNotes,
-    val people: InfoPeople,
-    val tags: InfoTags,
-    val urls: InfoUrls,
+    val editability: Editability,
+    val publiceditability: Publiceditability,
+    val usage: Usage,
+    val comments: Comments,
+    val notes: Notes,
+    val people: People,
+    val tags: Tags,
+    val location: Location,
+    val geoperms: Geoperms,
+    val urls: Urls,
     val media: String
 )

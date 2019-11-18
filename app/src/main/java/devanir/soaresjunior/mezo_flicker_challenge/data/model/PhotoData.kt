@@ -1,4 +1,4 @@
-package com.pixelart.week6daily2flikrapi.model
+package devanir.soaresjunior.mezo_flicker_challenge.data.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
